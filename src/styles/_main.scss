@@ -1,0 +1,66 @@
+.main{
+    display: grid;
+    gap: 6rem;
+
+    @include tabplus{
+        max-inline-size: 69.4375rem;
+    }
+
+    &__vr{
+        display: grid;
+        gap: 3rem;
+        padding-inline: 1.5rem;
+
+        @include tabplus{
+            padding-inline: unset;
+            block-size: 31.25rem;
+            position: relative;
+            inline-size: 69.4375rem;
+        }
+        
+
+        &-image{
+            block-size: 224px;
+            background: url('../../images/mobile/image-interactive.jpg');
+
+            @include tabplus{
+                block-size: 31.25rem;
+                inline-size: 45.6875rem;
+                background: url('../../images/desktop/image-interactive.jpg');
+                background-repeat: no-repeat;
+            }
+
+        }
+
+        &-text{
+            text-align: center;
+            display: grid;
+            gap: 1rem;
+
+            @include tabplus{
+                block-size: 317px;
+                inline-size: 541px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                padding-top: 6rem;
+                padding-left: 6rem;
+                text-align: left;
+                background-color: white;
+            }
+
+            h2{
+                text-transform: uppercase;
+                font-size: 2rem;
+                line-height: 32px;
+            }
+            p{
+                font-size: 15px;
+                line-height: 25px;
+                font-weight: 400;
+                font-family: 'Alata', sans-serif;
+                color: var(--Dark-Gray);
+            }
+        }
+    }
+}

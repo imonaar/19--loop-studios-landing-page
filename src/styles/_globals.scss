@@ -1,0 +1,48 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+html{
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+body{
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    //font-family: 'Alata', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+
+    font-size: 15px;
+}
+
+.pad-in{
+    padding-inline: 1.5rem;
+}
+
+ul, li, p, h1, h2{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
