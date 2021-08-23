@@ -22,6 +22,8 @@
         &-image{
             block-size: 224px;
             background: url('../../images/mobile/image-interactive.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
 
             @include tabplus{
                 block-size: 31.25rem;
@@ -60,6 +62,145 @@
                 font-weight: 400;
                 font-family: 'Alata', sans-serif;
                 color: var(--Dark-Gray);
+            }
+        }
+    }
+
+    &__gallery{
+        display: grid;
+        gap: 3rem;
+        padding-inline: 1.5rem;
+        inline-size: 100%;
+
+        &-header{
+            h3{
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 2rem;
+                line-height: 32px;
+            }
+        }
+    }
+
+    &__images{
+        display: grid;
+        gap: 2rem;
+
+        @include tabplus{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &-image{
+            block-size: 7.5rem;
+            inline-size: 100%;
+            position: relative;
+
+            @include tabplus{
+                block-size: 450px;
+                position: relative;
+                
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    block-size: 100%;
+                    inline-size: 100%;
+                    background-color: rgba(255, 255, 255);
+                    opacity: 0;
+                    transition: opacity 300ms ease-in-out;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    
+                    &::before{
+                        opacity: 0.75;
+                    }
+
+                    h4{
+                        color: black;
+                    }
+                }
+            }
+
+            &:first-child{
+                background: url('../../images/mobile/image-deep-earth.jpg');
+                background-size: cover;
+
+                @include tabplus{
+                    background: url('../../images/desktop/image-deep-earth.jpg');
+                    background-size: cover;
+                }
+            }
+            &:nth-child(2){
+                background: url('../../images/mobile/image-night-arcade.jpg');
+                background-size: cover;
+                @include tabplus{
+                    background: url('../../images/desktop/image-night-arcade.jpg');
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+            &:nth-child(3){
+                background: url('../../images/mobile/image-soccer-team.jpg');
+                background-size: cover;
+                @include tabplus{
+                    background: url('../../images/desktop/image-soccer-team.jpg');
+                }
+            }
+            &:nth-child(4){
+                background: url('../../images/mobile/image-grid.jpg');
+                background-size: cover;
+                @include tabplus{
+                    background: url('../../images/desktop/image-grid.jpg');
+                }
+            }
+            &:nth-child(5){
+                background: url('../../images/mobile/image-from-above.jpg');
+                background-size: cover;
+                @include tabplus{
+                    background: url('../../images/desktop/image-from-above.jpg');
+                }
+            }
+            &:nth-child(6){
+                background: url('../../images/mobile/image-pocket-borealis.jpg');
+                background-size: cover;
+                @include tabplus{
+                    background: url('../../images/desktop/image-pocket-borealis.jpg');
+                }
+            }
+            &:nth-child(7){
+                background: url('../../images/mobile/image-curiosity.jpg');
+                background-size: cover;
+                @include tabplus{
+                    background: url('../../images/desktop/image-curiosity.jpg');
+                }
+            }
+            &:last-child{
+                background: url('../../images/mobile/image-fisheye.jpg');
+                background-size: cover;
+                @include tabplus{
+                    background: url('../../images/desktop/image-fisheye.jpg');
+                }
+            }
+
+            h4{
+                text-transform: uppercase;
+                color: white;
+                font-size: 1.25rem;
+                line-height: 20px;
+                display: block;
+                position: absolute;
+                left: 20px;
+                bottom: -20px;
+
+                @include tabplus{
+                    left: 40px;
+                    bottom: -32px;
+                    font-size: 2rem;
+                    line-height: 32px;
+                }
             }
         }
     }
