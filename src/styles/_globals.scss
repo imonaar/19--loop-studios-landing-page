@@ -28,6 +28,10 @@ body{
     font-family: 'Josefin Sans', sans-serif;
 
     font-size: 15px;
+
+    @include tabplus{
+        gap: 160px;
+    }
 }
 
 .pad-in{

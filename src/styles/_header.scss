@@ -173,10 +173,10 @@
     }
 
     &__text{
-        margin-top: 163px;
+        margin-top: 123px;
         padding: 1.5rem;
         margin-inline: 1.5rem;
-        border: 1px solid white;
+        border: 2px solid white;
         max-inline-size: 650px;
         
         @include tabplus{
@@ -196,7 +196,7 @@
             @include tabplus{
                 font-size: 4.5rem;
                 line-height: 70px;
-
+                inline-size: 15ch;
             }
             
         }
