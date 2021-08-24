@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <title>Frontend Mentor | Loopstudios landing page</title>
 </head>
 <body>
     <header class="header  js-header">
@@ -22,26 +22,26 @@
             </div>
             <nav class="nav">
                 <div class="nav__links  js-nav-links ">
-                    <ul>
+                    <ul id="menu" role="menu">
                         <li class="nav__link">
-                            <a href="#">ABOUT</a>
+                            <a role="menuitem" href="#">About</a>
                         </li>
                         <li class="nav__link">
-                            <a href="#">careers</a>
+                            <a role="menuitem" href="#">Careers</a>
                         </li>
                         <li class="nav__link">
-                            <a href="#">events</a>
+                            <a role="menuitem" href="#">Events</a>
                         </li>
                         <li class="nav__link">
-                            <a href="#">products</a>
+                            <a role="menuitem" href="#">Products</a>
                         </li>
                         <li class="nav__link">
-                            <a href="#">support</a>
+                            <a role="menuitem" href="#">Support</a>
                         </li>
                     </ul>
                 </div>
                 <div class="nav__hamburger">
-                    <button class="menu-btn js-menu-btn">
+                    <button class="menu-btn js-menu-btn" aria-controls="menu">
                         <img class="hamburger" src="../images/icon-hamburger.svg" alt="icon hamburger">
                         <img class="times" src="../images/icon-close.svg" alt="icon-close">
                     </button>
@@ -100,15 +100,59 @@
                      <h4>mask it <br> fish eye</h4>
                 </div>
             </div>
-            <div class="main__images-button"></div>
+            <div class="main__images-button">
+                <button>
+                    see all
+                </button>
+            </div>
         </div>
     </main>
-    <footer class="footer pad-in">
-        <button>
-            see all
-        </button>
+    <footer class="footer">
+        <div class="footer__navigation">
+            <a href="#"  class="footer-logo">
+                <img src="../images/logo.svg" alt="loopstudios logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li >
+                    <a href="#">Careers</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">Products</a>
+                </li>
+                <li>
+                    <a href="#">Support</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__social">
+            <div class="icons">
+                <a href="#">
+                    <img src="../images/icon-facebook.svg" alt="icon-facebook">
+                </a>
+                <a href="#">
+                    <img src="../images/icon-twitter.svg" alt="icon-twitter">
+                </a>
+                <a href="#">
+                    <img src="../images/icon-pinterest.svg" alt="icon-pinterest">
+                </a>
+                <a href="#">
+                    <img src="../images/icon-instagram.svg" alt="icon-instagram">
+                </a>
+            </div>
+            <p>
+                &copy; 2021 Loopstudios. All rights reserved.
+            </p>
+        </div>
     </footer>
 
+    <script src="inert.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

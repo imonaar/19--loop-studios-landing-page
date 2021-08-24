@@ -1,0 +1,99 @@
+.footer{
+    background-color: black;
+    inline-size: 100%;
+    padding: 56px 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include tabplus{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 44px 165px 33px 165px;
+    }
+
+    a{
+        position: relative;
+
+        @include tabplus{
+            &::after{
+                content: '';
+                position: absolute;
+                inline-size: 24px;
+                block-size: 2px;
+                bottom: -7px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: white;
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+            }
+
+            &:hover{
+                &::after{
+                    opacity: 1;
+                }
+            }
+        }
+        
+        &.footer-logo{
+            &:hover{
+                &::after{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__navigation{
+        inline-size: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        @include tabplus{
+            align-items: flex-start;
+        }
+
+        ul{
+            display: grid;
+            gap: 1rem;
+
+            @include tabplus{
+                display: flex;
+            }
+
+            a{
+                color: white;
+                font-size: 15px;
+                font-weight: 400;
+                font-family: 'Alata', sans-serif;
+                line-height: 25px;
+            }
+        }
+    }
+    
+    &__social{
+        inline-size: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        @include tabplus{
+            align-items: flex-end;
+        }
+
+        .icons{
+            display: flex;
+            gap: 1rem;
+        }
+
+        p{
+            color: var(--Dark-Gray);
+            font-family: 'Alata', sans-serif;
+            line-height: 25px;
+        }
+    }
+}
